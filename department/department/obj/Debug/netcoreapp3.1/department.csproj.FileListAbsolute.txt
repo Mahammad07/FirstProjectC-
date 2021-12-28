@@ -1,0 +1,14 @@
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\bin\Debug\netcoreapp3.1\department.exe
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\bin\Debug\netcoreapp3.1\department.deps.json
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\bin\Debug\netcoreapp3.1\department.runtimeconfig.json
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\bin\Debug\netcoreapp3.1\department.runtimeconfig.dev.json
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\bin\Debug\netcoreapp3.1\department.dll
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\bin\Debug\netcoreapp3.1\department.pdb
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.csproj.AssemblyReference.cache
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.AssemblyInfoInputs.cache
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.AssemblyInfo.cs
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.csproj.CoreCompileInputs.cache
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.dll
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.pdb
+C:\Users\mehem\OneDrive\Desktop\firstProjectC#\department\department\obj\Debug\netcoreapp3.1\department.genruntimeconfig.cache

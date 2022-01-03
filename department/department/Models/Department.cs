@@ -1,4 +1,4 @@
-﻿using department.enums;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,10 +14,10 @@ namespace department.Models
         public int SalaryLimit { get; set; }
 
         public employee[] employees { get; set; }
-        public DepartmentName departmentname { get; set; }
+        
 
 
-        public Department(string name,int workerlimit,int salarylimit,employee[] employees)
+        public Department(string name,int workerlimit,int salarylimit)
         {
             if (name.Length < 2)
             {

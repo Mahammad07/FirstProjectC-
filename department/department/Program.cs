@@ -1,4 +1,4 @@
-﻿using department.enums;
+﻿
 using department.Models;
 using System;
 
@@ -56,11 +56,10 @@ namespace department
                         break;
                     case 4:
                         Console.Clear();
-                        
+
                             break;
                     case 5:
                         Console.Clear();
-                       
                         break;
                     case 6:
                         Console.Clear();
@@ -81,7 +80,12 @@ namespace department
 
             static void GetDepartment(ref HumanResourceManager humanResourceManager)
             {
-                if (humanResourceManager.departmens.Length < 0)
+                Console.WriteLine("departmenleri gormek ucun 1 duymesini basin");
+                string No=Console.ReadLine();
+                int intNo;
+                int .TryParse(No, out intNo);
+
+                if (humanResourceManager.departmens.Length < 1)
                 {
                     Console.WriteLine("sirketde department qurulmayib");
                 }
@@ -101,6 +105,8 @@ namespace department
             {
                 Console.WriteLine("Departmentin adini daxil edin:");
                 string name = Console.ReadLine();
+
+               
 
                 Console.WriteLine("Maksimum verilecek maasi daxil edin:");
                 string salaryLimit = Console.ReadLine();
@@ -128,13 +134,25 @@ namespace department
                     workerLimit = Console.ReadLine();
                 }
                 employee[] employes = new employee[] { };
-                humanResourceManager.AddDepartment(name, salary, workerNum, employes);
+                humanResourceManager.AddDepartment(name, salary, workerNum);
             }
 
             static void AddEmployee(ref HumanResourceManager humanResourceManager)
             {
+                Console.WriteLine("Iscinin departmentini yazin:");
+                string DepartmentName=Console.ReadLine();
+
+                if (DepartmentName.Length < 2)
+                {
+                    Console.WriteLine("Department adi yanlisdir");
+                }
+                else
+                {
+                    
+                    DepartmentName = Console.ReadLine();
+                }
                 Console.WriteLine("Iscinin adini yazin:");
-                string name = Console.ReadLine();
+                string fullname = Console.ReadLine();
 
                 Console.WriteLine("Iscinin vezifesinin yazin:");
                 string position = Console.ReadLine();
@@ -155,18 +173,28 @@ namespace department
                     salary = Console.ReadLine();
                 }
 
-                Console.WriteLine("Iscinin departmentini yazin:");
-                string departmentName = Console.ReadLine();
-                int departmentEnum;
-                int.TryParse(departmentName, out departmentEnum);
-                DepartmentName departmentname = (DepartmentName)departmentEnum;
+
+                
                 
 
-                humanResourceManager.AddEmployee(name,position,salaryNum, departmentname);
+                humanResourceManager.AddEmployee(fullname,position,salaryNum, DepartmentName);
             }
 
             static void RemoveEmployee(ref HumanResourceManager humanResourceManager)
             {
+                Console.WriteLine("Departmentin adini yazin:");
+                string departmentName = Console.ReadLine();
+                if(departmentName.Length < 2)
+                {
+                    Console.WriteLine("Department adi duzgun deil");
+                }
+                else
+                {
+                    departmentName = Console.ReadLine();
+                }
+
+
+
                 Console.WriteLine("Iscinin nomresini yazin:");
                 string employeeNo = Console.ReadLine();
                 int employeeNum;
@@ -184,13 +212,10 @@ namespace department
 
 
 
-                Console.WriteLine("Departmentin adini yazin:");
-                string departmentName = Console.ReadLine();
-                int departmentEnum;
-                int.TryParse(departmentName, out departmentEnum);
-                DepartmentName departmentname = (DepartmentName)departmentEnum;
                 
-                humanResourceManager.RemoveEmployee(employeeNo, departmentname);
+                
+                
+                humanResourceManager.RemoveEmployee(employeeNo, departmentName);
 
                 
             }
@@ -340,7 +365,14 @@ namespace department
 
 
                 }
+
+               
+                    
+                }
+
             }
+
+         
 
 
 
@@ -349,4 +381,8 @@ namespace department
 
         }
     }
-}
+
+
+
+
+

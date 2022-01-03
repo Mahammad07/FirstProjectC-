@@ -1,4 +1,4 @@
-﻿using department.enums;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,9 +13,9 @@ namespace department.Models
 
         private employee[] _employee;
 
-        public void AddDepartment(string name, int salarylimit, int workerlimt, employee[] employees)
+        public void AddDepartment(string name, int salarylimit, int workerlimt)
         {
-            Department department = new Department(name, salarylimit, workerlimt, employees);
+            Department department = new Department(name, salarylimit, workerlimt);
             Array.Resize(ref _departments, _departments.Length + 1);
             _departments[_departments.Length - 1] = department;
         }
@@ -79,35 +79,46 @@ namespace department.Models
 
 
 
-        public void AddEmployee(string fullname, string position, int salary,DepartmentName departmentName)
+        public void AddEmployee(string fullname, string position, int salary,string  departmentname)
         {
-            employee employees = new employee(fullname ,position,salary,departmentName );
-            Array.Resize(ref _employee, _employee.Length + 1);
-            _employee[_employee.Length - 1] = employees;
-        }
-
-        public void RemoveEmployee(string employeeNo, DepartmentName departmentName)
-        {
-            for (int i = 0; i < _employee.Length; i++)
+            foreach (Department item in _departments)
             {
-               if(_employee[i]!=null &&  _employee[i].No == employeeNo )
+              if(  item.Name == departmentname);
+              
                 {
-                    _employee[i] = null;
-                    return;
+                    employee employees = new employee(fullname, position, salary, departmentname);
+                    Array.Resize(ref _employee, _employee.Length + 1);
+                    _employee[_employee.Length - 1] = employees;
                 }
-
             }
-
+            
+            
         }
 
-        public void RemoveEmployee(string employeeNo)
+        public void RemoveEmployee(string employeeNo, string departmentName)
         {
-            throw new NotImplementedException();
+            foreach (Department item in _departments)
+            {
+                if (item.Name == departmentName) ;
+                {
+                    for (int i = 0; i < _employee.Length; i++)
+                    {
+                        if (_employee[i] != null && _employee[i].No == employeeNo)
+                        {
+                            _employee[i] = null;
+                            return;
+                        }
+
+                    }
+
+                }
+            }
+           
         }
 
-        public void EditDepartment(string name, int newworkerlimit, int salarylimit, int newSalarylimit)
-        {
-            throw new NotImplementedException();
-        }
+        
+
+        
+
     }
 }

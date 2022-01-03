@@ -26,6 +26,7 @@ namespace department
             HumanResourceManager humanResourceManager = new HumanResourceManager();
             do
             {
+                Console.Clear();
                 Console.WriteLine("-------------------------------Department Management-----------------------------");
                 Console.WriteLine("Etmek istediyiniz emeliyata uygun reqemi daxil edin");
                 Console.WriteLine("1-Department siyahisini gostermek");
@@ -111,29 +112,33 @@ namespace department
                 Console.WriteLine("Maksimum verilecek maasi daxil edin:");
                 string salaryLimit = Console.ReadLine();
                 int salary;
-                int.TryParse(salaryLimit, out salary);
-                if (salary < 250)
+                
+                while (int.TryParse(salaryLimit, out salary) && salary < 250) 
                 {
-                    Console.WriteLine("maas 250 den yuxari olmalidir.Yaziqdir camaat das yemir dolanmalidir:)");
-                }
-                else
-                {
-                    salaryLimit = Console.ReadLine();
-                }
 
+                    Console.WriteLine("maas 250 den yuxari olmalidir.Duzgun maas yazin:");
+                    salaryLimit = Console.ReadLine();
+
+
+
+
+                }
+      
                 Console.WriteLine("Maksimum isci sayini daxil edin:");
                 string workerLimit =Console.ReadLine();
                 int workerNum;
-                int.TryParse(workerLimit, out workerNum);
-                if (workerNum < 1)
+               Console.Clear();
+                while (int.TryParse(workerLimit, out workerNum) && workerNum < 1) 
                 {
                     Console.WriteLine("isci sayi 1 den asagi ola bilmez");
-                }
-                else
-                {
+                    
+
                     workerLimit = Console.ReadLine();
+
+
                 }
-                employee[] employes = new employee[] { };
+               
+
                 humanResourceManager.AddDepartment(name, salary, workerNum);
             }
 

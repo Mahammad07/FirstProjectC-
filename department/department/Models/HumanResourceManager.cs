@@ -13,6 +13,13 @@ namespace department.Models
 
         private employee[] _employee;
 
+        public HumanResourceManager()
+        {
+            _departments = new Department[0];
+            _employee = new employee[0];
+
+        }
+
         public void AddDepartment(string name, int salarylimit, int workerlimt)
         {
             Department department = new Department(name, salarylimit, workerlimt);
@@ -83,7 +90,7 @@ namespace department.Models
         {
             foreach (Department item in _departments)
             {
-              if(  item.Name == departmentname);
+              if(  item.Name == departmentname)
               
                 {
                     employee employees = new employee(fullname, position, salary, departmentname);
@@ -99,7 +106,7 @@ namespace department.Models
         {
             foreach (Department item in _departments)
             {
-                if (item.Name == departmentName) ;
+                if (item.Name == departmentName) 
                 {
                     for (int i = 0; i < _employee.Length; i++)
                     {
